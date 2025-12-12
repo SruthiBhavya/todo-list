@@ -1,0 +1,139 @@
+:root{
+  --max-width: 560px;
+  --bg: #f8f8f8;
+  --muted: #666;
+  --accent: #007bff;
+  --danger: #e04b4b;
+  --success: #28a745;
+}
+
+/* Container */
+.todo-container {
+  max-width: var(--max-width);
+  margin: 30px auto;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.03);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Title */
+.title {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+/* Form */
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.todo-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.08);
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.add-btn {
+  background: var(--accent);
+  color: white;
+}
+
+.edit-btn {
+  background: #f0ad4e;
+  color: white;
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: white;
+}
+
+/* Filters */
+.filter-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 6px 10px;
+  background: white;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+/* Tasks */
+.tasks-area {
+  margin-top: 6px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 6px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 0.98rem;
+  color: #111;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.9;
+}
+
+/* No task */
+.no-task {
+  text-align: center;
+  color: var(--muted);
+  margin: 18px 0;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .todo-container {
+    margin: 16px;
+    padding: 14px;
+  }
+
+  .btn { padding: 7px 9px; font-size: 0.85rem; }
+  .todo-input { padding: 10px; font-size: 0.9rem; }
+}
